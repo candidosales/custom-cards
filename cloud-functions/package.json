@@ -1,0 +1,26 @@
+{
+  "name": "custom-cards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/tslint -p tslint.json && ./node_modules/.bin/tsc",
+    "start": "npm run build && npx @google-cloud/functions-framework --target=helloWorld --signature-type=http",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^1.5.1",
+    "axios": "^0.19.2",
+    "dayjs": "^1.8.26",
+    "dayjs-plugin-utc": "^0.1.2"
+  },
+  "devDependencies": {
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.2"
+  }
+}
